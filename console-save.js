@@ -3,7 +3,7 @@
     console.save = function(filename, data){
 
         if(!data) {
-            console.err('Console.save: No data')
+            console.error('Console.save: No data')
             return;
         }
 
