@@ -2,7 +2,7 @@
 
     console.save = function(filename, data){
 
-        if(data === null) {
+        if(!data) {
             console.err('Console.save: No data')
             return;
         }
