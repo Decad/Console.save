@@ -1,14 +1,16 @@
 (function(console){
 
-    console.save = function(filename, data){
+    console.save = function(data, filename){
 
         if(!data) {
             console.error('Console.save: No data')
             return;
         }
 
+        if(!filename) filename = 'console.json'
+
         if(typeof data === "object"){
-            data = JSON.stringify(data)
+            data = JSON.stringify(data, undefined, 4)
         }
 
         var blob = new Blob([data], {type: 'text/json'}),
